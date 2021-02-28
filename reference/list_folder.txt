@@ -1,0 +1,13 @@
+Didn't need it this time, but if we need to list all files via File.ListFolderAsync() - can pass "" to get root contents
+
+-------------------------------
+
+In order to get the right path values though, you can list the contents of a folder using ListFolderAsync:
+
+https://dropbox.github.io/dropbox-sdk-dotnet/html/M_Dropbox_Api_Files_Routes_FilesUserRoutes_ListFol...
+
+You can supply "" as the path to list the contents of the root folder, or any subfolder such as "/C#". You can then get the resulting 'PathLower' value for the desired file and use that in DownloadAsync.
+
+-------------------------------
+
+2020-10-12 - jv
